@@ -1,0 +1,62 @@
+.header_wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.header_slogan {
+  max-width: 230px;
+  text-align: center;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.header_contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.header_phone {
+  min-width: 260px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Source Serif Variable";
+  font-size: 35px;
+  margin-bottom: 5px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./assets/img/icons/tel.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    vertical-align: baseline;
+    padding-right: 15px;
+  }
+}
+
+.header_button {
+  border: none;
+  background: transparent;
+  color: $primary_text_color;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
