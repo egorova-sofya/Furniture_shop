@@ -1,14 +1,24 @@
-const tabs = (headerSelector, tabSelector, activeClass) => {
+const tabs = (headerSelector, tabSelector, activeClass, contentSelector) => {
   const header = document.querySelector(headerSelector),
-    tab = document.querySelectorAll(tabSelector);
+    tab = document.querySelectorAll(tabSelector),
+    content = document.querySelectorAll(contentSelector);
 
   function hideTabContent() {
+    if (content.length !== 0) {
+      content.forEach((item) => {
+        item.style.display = "none";
+      });
+    }
+
     tab.forEach((item) => {
       item.classList.remove(activeClass);
     });
   }
 
   function showTabContent(i = 0) {
+    if (content.length !== 0) {
+      content[i].style.display = "block";
+    }
     tab[i].classList.add(activeClass);
   }
 
@@ -32,9 +42,4 @@ const tabs = (headerSelector, tabSelector, activeClass) => {
   });
 };
 
-tabs(
-  ".calc_list-materials",
-  ".calc_item-material",
-  "calc_item-material--active"
-);
 export default tabs;

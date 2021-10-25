@@ -1,0 +1,49 @@
+.timer {
+  width: 100%;
+
+  @media (max-width: 991px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+  @media (max-width: 530px) {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.timer-description {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.timer-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.timer-number {
+  display: block;
+  width: 70px;
+  height: 60px;
+  border: 2px solid $primary_text_color;
+  border-radius: 12px;
+
+  font-size: 45px;
+  font-family: "Source Serif Pro", serif;
+  color: $primary_text_color;
+  text-align: center;
+  padding: 17px 14px 7px 10px;
+}
+
+.timer-text {
+  text-align: center;
+}
+
+.sale_button {
+  padding: 25px 40px;
+  font-size: 25px;
+}

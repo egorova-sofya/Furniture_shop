@@ -12,7 +12,7 @@
       <header class="header">
         <div class="header_logo">
           <img
-            src="../assets/img/logo.svg"
+            src="./assets/img/logo.svg"
             alt="стилизованный рисунок шкафа"
             width="300"
           />
@@ -65,11 +65,28 @@
                 </p>
                 <p class="modal_text">Оставьте заявку и мы с вами свяжемся.</p>
               </div>
-              <form class="modal_form" action="GET">
-                <input class="modal_input" type="text" placeholder="Имя" />
-                <input class="modal_input" type="email" placeholder="E-mail" />
-                <input class="modal_input" type="tel" placeholder="Телефон" />
-                <button class="button modal_button" type="button">
+              <form class="modal_form" action="#">
+                <input
+                  class="modal_input"
+                  type="text"
+                  name="user_name"
+                  placeholder="Имя"
+                  required
+                />
+                <input
+                  class="modal_input"
+                  type="email"
+                  name="user_email"
+                  placeholder="E-mail"
+                />
+                <input
+                  class="modal_input"
+                  type="tel"
+                  name="user_phone"
+                  placeholder="Телефон"
+                  required
+                />
+                <button class="button modal_button" type="submit">
                   Отправить
                 </button>
               </form>
@@ -83,7 +100,7 @@
           <li class="calc_item-material">
             <img
               class="calc_img"
-              src="../assets/img/materials/particle-board.png"
+              src="./assets/img/materials/particle-board.jpg"
               alt="ДСП"
               width="100"
             />
@@ -92,7 +109,7 @@
           <li class="calc_item-material">
             <img
               class="calc_img"
-              src="../assets/img/materials/wood.png"
+              src="./assets/img/materials/wood.jpg"
               alt="Дерево"
               width="100"
             />
@@ -101,7 +118,7 @@
           <li class="calc_item-material">
             <img
               class="calc_img"
-              src="../assets/img/materials/metal.png"
+              src="./assets/img/materials/metal.jpg"
               alt="Сталь"
               width="100"
             />
@@ -110,7 +127,7 @@
           <li class="calc_item-material">
             <img
               class="calc_img"
-              src="../assets/img/materials/stone.png"
+              src="./assets/img/materials/stone.jpg"
               alt="Камень"
               width="100"
             />
@@ -120,110 +137,315 @@
         <div class="calc_subjects">
           <div class="calc_subject calc_subject--individual">
             <p class="calc_text">Для физ. лиц</p>
-            <button class="button" type="button">Рассчитать</button>
+            <button class="button calc_button" type="button">Рассчитать</button>
           </div>
           <div class="calc_subject calc_subject--entity">
             <p class="calc_text">Для юр. лиц</p>
-            <button class="button" type="button">Рассчитать</button>
+            <button class="button calc_button" type="button">Рассчитать</button>
           </div>
         </div>
       </section>
 
       <section class="sale">
-        <h2 class="title sale_title">Успейте получить скидку</h2>
-        <div class="sale_description">
-          <p class="sale_text">
-            Наша компания предлагает 3D дизайн вашего помещения с изготовлением
-            мебели на заказ по очень привлекательной цене по индивидуальному
-            проекту и размерам. Скидка распространяется на:
-          </p>
-
-          <ul class="sale_list">
-            <li class="sale_item">Детские в современном стиле</li>
-            <li class="sale_item">Стенки в гостиную</li>
-            <li class="sale_item">Шкафы-купе</li>
-            <li class="sale_item">Офисная мебель</li>
-            <li class="sale_item">Комоды</li>
-            <li class="sale_item">Гардеробные</li>
-            <li class="sale_item">Детские в современном стиле</li>
-          </ul>
+        <div class="sale_title-wrapper">
+          <h2 class="title sale_title">Успейте получить скидку</h2>
+          <p class="sale_title-description">Только до 29 декабря!</p>
         </div>
-        <button class="button sale_button modal_btn" type="button">
-          Забронировать скидку
-        </button>
+
+        <div class="sale_wrapper">
+          <div class="sale_description">
+            <p class="sale_text">
+              Наша компания предлагает 3D дизайн вашего помещения с
+              изготовлением мебели на заказ по очень привлекательной цене по
+              индивидуальному проекту и размерам. Скидка распространяется на:
+            </p>
+            <div class="sale_list-wrapper">
+              <ul class="sale_list">
+                <li class="sale_item">Детские в современном стиле</li>
+                <li class="sale_item">Стенки в гостиную</li>
+                <li class="sale_item">Шкафы-купе</li>
+                <li class="sale_item">Офисная мебель</li>
+                <li class="sale_item">Комоды</li>
+                <li class="sale_item">Гардеробные</li>
+                <li class="sale_item">Детские в современном стиле</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sale-timer timer">
+            <p class="timer-description">До завершения акции:</p>
+            <ul class="timer-list">
+              <li class="timer-item">
+                <span class="timer-number" id="days">30</span>
+                <p class="timer-text">Дней</p>
+              </li>
+              <li class="timer-item">
+                <span class="timer-number" id="hours">04</span>
+                <p class="timer-text">Часов</p>
+              </li>
+              <li class="timer-item">
+                <span class="timer-number" id="minutes">29</span>
+                <p class="timer-text">Минут</p>
+              </li>
+              <li class="timer-item">
+                <span class="timer-number" id="seconds">12</span>
+                <p class="timer-text">Секунд</p>
+              </li>
+            </ul>
+          </div>
+
+          <button class="button sale_button modal_btn" type="button">
+            Забронировать скидку
+          </button>
+        </div>
+
+        <div class="sale_bg"></div>
       </section>
 
       <section class="works">
         <h2 class="title works_title">Наши работы</h2>
         <ul class="works_list">
           <li class="work_item">
-            <a href=""
+            <a
+              href="./assets/img/our_works/big_img/haley-truong-G8v9b8SdzYM-unsplash.jpg"
               ><img
-                src="../assets/img/our_works/haley-truong-G8v9b8SdzYM-unsplash.jpg"
+                class="works_img-preview"
+                src="./assets/img/our_works/haley-truong-G8v9b8SdzYM-unsplash.jpg"
                 alt=""
                 width="340"
             /></a>
           </li>
-          <!-- href="assets/img/our_works/big_img/4.png" -->
+          <li class="work_item">
+            <a
+              href="./assets/img/our_works/big_img/hayffield-l--x0lqp1UgwM-unsplash.jpg"
+              ><img
+                class="works_img-preview"
+                src="./assets/img/our_works/hayffield-l--x0lqp1UgwM-unsplash.jpg"
+                alt=""
+                width="340"
+            /></a>
+          </li>
+          <li class="work_item">
+            <a
+              href="./assets/img/our_works/big_img/hayffield-l-QVFlbOYfnLI-unsplash.jpg"
+              ><img
+                class="works_img-preview"
+                src="./assets/img/our_works/hayffield-l-QVFlbOYfnLI-unsplash.jpg"
+                alt=""
+                width="340"
+            /></a>
+          </li>
+          <li class="work_item">
+            <a
+              href="./assets/img/our_works/big_img/julian-hochgesang-2Z0AsJzhEUA-unsplash.jpg"
+              ><img
+                class="works_img-preview"
+                src="./assets/img/our_works/julian-hochgesang-2Z0AsJzhEUA-unsplash.jpg"
+                alt=""
+                width="340"
+            /></a>
+          </li>
+          <li class="work_item">
+            <a
+              href="./assets/img/our_works/big_img/kyle-austin-GvVGZg8vYiU-unsplash.jpg"
+              ><img
+                class="works_img-preview"
+                src="./assets/img/our_works/kyle-austin-GvVGZg8vYiU-unsplash.jpg"
+                alt=""
+                width="340"
+            /></a>
+          </li>
+          <li class="work_item">
+            <a
+              href="./assets/img/our_works/big_img/marc-olivier-paquin-22un7d0C-pQ-unsplash.jpg"
+              ><img
+                class="works_img-preview"
+                src="./assets/img/our_works/marc-olivier-paquin-22un7d0C-pQ-unsplash.jpg"
+                alt=""
+                width="340"
+            /></a>
+          </li>
         </ul>
       </section>
 
-      <section class="features">
-        <h2 class="title features_title">Мы гарантируем вам</h2>
-        <!-- <ul class="features_list">
-          <li class="feature_item feature_item--quality">Высокое качество</li>
-          <li class="feature_item feature_item--quality">
-            Быстрое производство
-          </li>
-          <li class="feature_item feature_item--quality">
-            Бесплатная доставка
-          </li>
-          <li class="feature_item feature_item--quality">
-            Премиум мебель по доступной цене
-          </li>
-          <li class="feature_item feature_item--quality">
-            Экологичные материалы
-          </li>
-          <li class="feature_item feature_item--quality">
-            Помощь профессионального дизайнера
-          </li>
-        </ul> -->
-      </section>
+      <div class="feedback_wrapper">
+        <section class="feedback">
+          <h2 class="feedback_title">Остались вопросы?</h2>
+          <button class="feedback_button modal_btn" type="button">
+            Спросите у нашего специалиста!
+          </button>
+        </section>
+      </div>
 
-      <section class="payment"></section>
-      <section class="location"></section>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer_logo">
+          <img src="./assets/img/small-logo.svg" alt="Шифоньер" width="300" />
+        </div>
+        <a class="footer_phone" href="tel">+7-912-345-67-78</a>
+      </footer>
     </main>
-    <div class="modal_wrapper">
-      <div class="modal_overlay modal_overlay--hide" id="overlay-modal"></div>
-      <div class="modal modal_popap modal_hide">
+
+    <div class="modal-calc_overlay" data-modal>
+      <div class="modal modal_calc">
+        <button class="modal_close" type="button"></button>
+        <div class="modal_description">
+          <p class="modal_main-text">Калькулятор</p>
+          <p class="modal_text">Выберите тип мебели и укажите количество</p>
+        </div>
+        <ul class="modal_icons-list">
+          <li class="modal_icon-item modal_do-icon-more">
+            <img
+              class="modal_icon"
+              src="./assets/img/icons/chair.svg"
+              alt="стул"
+              width="30px"
+            />
+          </li>
+          <li class="modal_icon-item">
+            <img
+              class="modal_icon"
+              src="./assets/img/icons/bed.svg"
+              alt=""
+              width="45px"
+            />
+          </li>
+          <li class="modal_icon-item">
+            <img
+              class="modal_icon"
+              src="./assets/img/icons/table.svg"
+              alt=""
+              width="45px"
+            />
+          </li>
+          <li class="modal_icon-item">
+            <img
+              class="modal_icon"
+              src="./assets/img/icons/cupboard.svg"
+              alt=""
+              width="35px"
+            />
+          </li>
+        </ul>
+
+        <ul class="modal_big-icons-list">
+          <li class="modal_big-icon-item fade">
+            <img
+              class="modal_big-icon"
+              src="./assets/img/icons/chair.svg"
+              alt=""
+              width="150px"
+            />
+          </li>
+          <li class="modal_big-icon-item fade">
+            <img
+              class="modal_big-icon"
+              src="./assets/img/icons/bed.svg"
+              alt=""
+              width="150px"
+            />
+          </li>
+          <li class="modal_big-icon-item fade">
+            <img
+              class="modal_big-icon"
+              src="./assets/img/icons/table.svg"
+              alt=""
+              width="150px"
+            />
+          </li>
+          <li class="modal_big-icon-item fade">
+            <img
+              class="modal_big-icon"
+              src="./assets/img/icons/cupboard.svg"
+              alt=""
+              width="150px"
+            />
+          </li>
+        </ul>
+        <div class="modal_amount">
+          <label class="visually-hidden" for="amount">Количество</label>
+          <input
+            class="modal_input modal_input-amount"
+            type="number"
+            id="amount"
+            placeholder="Количество"
+            required
+          />
+          <p class="modal_amount-text">шт</p>
+        </div>
+
+        <button
+          class="button modal_button modal_button-calc"
+          type="submit"
+          data-fill="fill"
+        >
+          Далее
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-calc-end_overlay">
+      <div class="modal modal_popap">
+        <button class="modal_close" type="button"></button>
+        <div class="modal_description">
+          <p class="modal_main-text">Спасибо за обращение!</p>
+          <p class="modal_text">Оставьте свои данные.</p>
+        </div>
+        <form class="modal_form" action="GET" data-calc="end">
+          <input
+            class="modal_input"
+            type="text"
+            name="user_name"
+            placeholder="Имя"
+            required
+          />
+          <input
+            class="modal_input"
+            type="email"
+            name="user_email"
+            placeholder="E-mail"
+          />
+          <input
+            class="modal_input"
+            type="tel"
+            name="user_phone"
+            placeholder="Телефон"
+            required
+          />
+          <button class="button modal_button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal_overlay">
+      <div class="modal modal_popap">
         <button class="modal_close" type="button"></button>
         <div class="modal_description">
           <p class="modal_main-text">Хотите получить отличное предложение?</p>
           <p class="modal_text">Оставьте заявку и мы с вами свяжемся.</p>
         </div>
         <form class="modal_form" action="GET">
-          <input class="modal_input" type="text" />
-          <input class="modal_input" type="email" />
-          <input class="modal_input" type="tel" />
-          <button class="button modal_button" type="button">Отправить</button>
+          <input
+            class="modal_input"
+            type="text"
+            name="user_name"
+            placeholder="Имя"
+            required
+          />
+          <input
+            class="modal_input"
+            type="email"
+            name="user_email"
+            placeholder="E-mail"
+          />
+          <input
+            class="modal_input"
+            type="tel"
+            name="user_phone"
+            placeholder="Телефон"
+            required
+          />
+          <button class="button modal_button" type="submit">Отправить</button>
         </form>
       </div>
-    </div>
-
-    <div class="modal_overlay modal_overlay--hide" id="overlay-modal"></div>
-    <div class="modal modal_calc modal_hide">
-      <button class="modal_close" type="button"></button>
-      <div class="modal_description">
-        <h3>Калькулятор</h3>
-        <p class="modal_text">Выберите тип мебели и укажите количество</p>
-      </div>
-      <form class="modal_form" action="GET">
-        <input class="modal_input" type="text" />
-        <input class="modal_input" type="email" />
-        <input class="modal_input" type="tel" />
-        <button class="button modal_button" type="button">Отправить</button>
-      </form>
     </div>
 
     <script src="./script.js"></script>

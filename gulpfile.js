@@ -8,6 +8,7 @@ const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 
 const dist = "./dist/";
+// const dist = "C:/MAMP/htdocs/test";
 
 // Sass Task
 gulp.task("scss-task", () => {

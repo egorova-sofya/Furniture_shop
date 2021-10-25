@@ -1,0 +1,50 @@
+.feedback {
+  max-width: 1170px;
+  height: 130px;
+  padding: 0 10px;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    padding: 0 5px;
+    flex-direction: column;
+  }
+}
+
+.feedback_wrapper {
+  height: 130px;
+
+  background-color: $primary;
+  margin-bottom: 50px;
+}
+
+.feedback_title {
+  color: #fff;
+  font-size: 25px;
+  padding-right: 30px;
+  font-weight: 400;
+  @media (max-width: 991px) {
+    font-size: 20px;
+  }
+}
+
+.feedback_button {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+  @media (max-width: 991px) {
+    font-size: 20px;
+  }
+}
