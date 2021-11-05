@@ -13,7 +13,7 @@ const dist = "./dist/";
 // Sass Task
 gulp.task("scss-task", () => {
   return gulp
-    .src("src/assets/scss/style.scss")
+    .src("src/scss/style.scss")
     .pipe(sass())
     .pipe(postcss([cssnano()]))
     .pipe(gulp.dest(dist))
@@ -84,7 +84,7 @@ gulp.task("watch", () => {
   gulp.watch("./src/index.html", gulp.parallel("copy-html"));
   gulp.watch("./src/assets/**/*.*", gulp.parallel("copy-assets"));
   gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
-  gulp.watch(["src/assets/scss/**/*.scss"], gulp.parallel("scss-task"));
+  gulp.watch(["src/scss/**/*.scss"], gulp.parallel("scss-task"));
 });
 
 gulp.task(
