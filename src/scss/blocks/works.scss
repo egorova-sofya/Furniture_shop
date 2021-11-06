@@ -14,7 +14,7 @@
     padding: 0 5px;
     padding-bottom: 5rem;
   }
-  @media (max-width: 530px) {
+  @media (max-width: 480px) {
     padding-bottom: 2rem;
   }
 }
@@ -47,8 +47,8 @@
     grid-template-rows: repeat(3, 300px);
   }
   @media (max-width: 650px) {
-    grid-template-columns: 200px 200px;
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: 170px 170px;
+    grid-template-rows: repeat(3, 170px);
 
     gap: 0;
   }
@@ -75,7 +75,7 @@
     height: 300px;
   }
   @media (max-width: 650px) {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
   }
 }

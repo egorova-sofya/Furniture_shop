@@ -29,14 +29,13 @@
   @media (max-width: 991px) {
     padding: 5rem 5px;
   }
-  @media (max-width: 530px) {
+  @media (max-width: 480px) {
     padding: 2rem 5px;
   }
 }
 
 .main {
   width: 100%;
-
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 10rem;
@@ -60,24 +59,21 @@
   font-weight: 700;
   color: $primary_text_color;
   font-style: normal;
-
   max-width: 430px;
-
   margin-bottom: 130px;
   margin-top: 40px;
   @media (max-width: 1199px) {
     padding-left: 100px;
   }
   @media (max-width: 991px) {
+    font-size: 35px;
     padding-left: 0;
-
     text-align: center;
     margin: 0 auto;
   }
 }
 
 .main_features-list {
-  // padding-right: 150px;
   @media (max-width: 991px) {
     padding-right: 0;
   }
@@ -85,7 +81,6 @@
 
 .main .main_modal {
   position: static;
-
   transform: translateX(0);
 
   @media (max-width: 991px) {
